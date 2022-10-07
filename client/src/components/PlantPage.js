@@ -9,6 +9,7 @@ function PlantPage() {
 
   useEffect(() => {
     // no need to use http://localhost:3000 here
+    // because backend has been proxied to localhost:3000 in package.json
     fetch("/plants")
       .then((r) => r.json())
       .then((plantsArray) => {
